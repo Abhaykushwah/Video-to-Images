@@ -1,0 +1,21 @@
+Image Formats:
+
+JPEG (.jpg, .jpeg)
+PNG (.png)
+BMP (.bmp)
+GIF (.gif)
+TIFF (.tif, .tiff)
+PBM, PGM, PPM (.pbm, .pgm, .ppm)
+Sun Raster (.sr, .ras)
+Targa (.tga)
+HDR (.hdr, .pic)
+Video Formats:
+
+AVI (.avi)
+MPEG-1 (.mpg, .mpeg)
+MPEG-4 (.mp4)
+QuickTime (.mov)
+Windows Media Video (.wmv)
+ASF (.asf)
+MJPEG (.mjpeg)
+Matroska (.mkv)
