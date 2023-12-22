@@ -5,11 +5,10 @@
 
 import cv2
 
+file = "ReCode.mkv"
+capture = cv2.VideoCapture(file)
 
-path = "ReCode.mkv"
-capture = cv2.VideoCapture(path)
-
-# exiting program in case of any error 
+# exiting program in case of any error
 if not capture.isOpened():
     print("Error opening video file")
     exit()
@@ -17,18 +16,19 @@ if not capture.isOpened():
 # Initialize a frame counter
 frame_count = 0
 
-## working on video while True
+# working on video while True
 while True:
-    ## return ture while capturing
-    return_cap = capture.read() ## at the end of the video the value of this variable will be false 
-    frame = capture.read() ## returning two values, and using tuple unpacking only single fram at a time
+    # return true while capturing
+    # return_cap = capture.read() ## at the end of the video the value of this variable will be false 
+    return_cap, frame = capture.read() ## returning two values, and using tuple unpacking only single fram at a time
 
     if not return_cap:
         break
-    ## Save the frame as an image
+    # Save the frame as an image
     else:
-        image_filename = f"frame_{frame_count:04d}.jpg" ## saveing image 
-        cv2.imwrite(image_filename, frame)  ## SYNTAX : cv2.imwrite(filename, image)
+        image_filename = f"frame_{frame_count:04d}.jpg"  ## saveing image && 04d is a format specifier which is d = decimal and 04 = 0001 - 9999
+        # Extract the frame from the tuple before writing
+        cv2.imwrite(image_filename, frame)  # SYNTAX : cv2.imwrite(filename, img)
 
         frame_count += 1
 
